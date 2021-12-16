@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>おみくじ2022</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/profile/profile_files/profile.png">
+</head>
+
+<header>
+    <center>
+        <h1>おみくじ２０２２</h1>
+    </center>
+</header>
+<style>
+	header {
+		position: fixed;
+		color: white;
+		width: 100%;
+		height: 70px;
+		background-color: #8dc21f;
+	}
+</style>
+
+<br>
+<br>
+<br>
+
+<body>
+<div>
+    <!--フォーム-->
+    <form name="login_form">
+        <center>
+            <h1 class="contact-title">おみくじ2022年　結果確認</h1>
+            <p>年賀状に記載されているID、Passwordをご入力の上、「祈る」ボタンをクリックしてください。</p>
+        </center>
+        <div>
+
+            <center>
+                <div>
+                    <input type="id" name="id" placeholder="ID">
+                </div>
+                <br>
+                <div>
+                    <input type="password" name="pass" placeholder="Password" onchange="nextPage()">
+                </div>
+            </center>
+
+        </div>
+        <button type="button" onClick="nextPage();">祈る</button>
+    </form>
+
+    <!--ログイン処理-->
+    <script language="JavaScript" type="text/javascript">
+			function nextPage() {
+				id = document.login_form.id.value
+				pwd = document.login_form.pass.value;
+				location.href = id + pwd + ".html";
+			}
+		</script>
+
+</div>
+
+
+</body>
+
+</html>
